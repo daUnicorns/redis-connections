@@ -1,5 +1,4 @@
-var client = require('redis').createClient(process.env.REDIS_URL); //process.env.REDIS_URL
-
+var client = require('redis').createClient(process.env.REDIS_URL);
 function addToDb (key,value){
     client.HSET('Running times', key, value, function(err,reply){
         if(err) {
