@@ -1,4 +1,5 @@
 var client = /*Your code goes here*/
+
 function addToDb (key,value){
     client.HSET('Running times', key, value, function(err,reply){
         if(err) {
