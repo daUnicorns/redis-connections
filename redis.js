@@ -1,4 +1,4 @@
-var client = require('redis').createClient(); //process.env.REDIS_URL
+var client = /*Your code goes here*/
 
 function addToDb (key,value){
     client.HSET('Running times', key, value, function(err,reply){
@@ -9,7 +9,7 @@ function addToDb (key,value){
             console.log( reply );
         }
     });
-}
+};
 
 function displayDb (callback) {
     client.HGETALL('Running times', function (err, reply) {
